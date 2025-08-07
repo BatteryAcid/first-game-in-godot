@@ -292,6 +292,9 @@ autoplay = "move"
 [node name="Slime" parent="." instance=ExtResource("6_l0s6b")]
 position = Vector2(529, 81)
 
+[node name="Slime2" parent="." instance=ExtResource("6_l0s6b")]
+position = Vector2(610, 80)
+
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Labels"]
@@ -351,3 +354,5 @@ position = Vector2(622.5, -136.5)
 shape = SubResource("RectangleShape2D_2186x")
 
 [connection signal="body_entered" from="FinishLine" to="FinishLine" method="_on_body_entered"]
+
+[editable path="Slime"]

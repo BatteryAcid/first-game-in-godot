@@ -7,6 +7,14 @@ const JUMP_VELOCITY = -300.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+# Para compatibilidade com o sistema de pontuação
+func get_player_id():
+	return 1  # Player singleplayer sempre tem ID 1
+
+func _ready():
+	# Adiciona ao grupo players para compatibilidade
+	add_to_group("players")
+
 @onready var animated_sprite = $AnimatedSprite2D
 
 func _physics_process(delta):
