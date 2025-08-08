@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://2653e6f4aw4v"]
+
+[ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_0payp"]
+[ext_resource type="Script" uid="uid://f8n8yoc2018w" path="res://scripts/score_label.gd" id="2_ep32e"]
+
+[node name="ScoreCounter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -538.0
+offset_top = -298.0
+offset_right = -295.0
+offset_bottom = -243.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_0payp")
+theme_override_font_sizes/font_size = 25
+text = "0 Points"
+script = ExtResource("2_ep32e")

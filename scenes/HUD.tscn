@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4hr4itwf56st"]
+
+[ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_fls4u"]
+[ext_resource type="Script" uid="uid://f8n8yoc2018w" path="res://scripts/score_label.gd" id="2_1etfg"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -7)
+zoom = Vector2(4, 4)
+limit_bottom = 120
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="ScoreLabel" type="Label" parent="Camera2D/CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -538.0
+offset_top = -298.0
+offset_right = -295.0
+offset_bottom = -243.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_fls4u")
+theme_override_font_sizes/font_size = 25
+text = "0 Points"
+script = ExtResource("2_1etfg")
+metadata/_edit_use_anchors_ = true
